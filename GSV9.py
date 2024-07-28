@@ -35,7 +35,7 @@ for value1, value2 in zip(first_column, second_column):
         first = panos[0]  # There are multiple images at that location so you pick which one you want
 
         print(first)  # prints the pano_id for the image you want and other info
-        meta = get_panorama_meta(pano_id=first.pano_id, api_key='AIzaSyCXNyCNpX62rVPyVjmHbXkqElpbZxwPNYI')
+        meta = get_panorama_meta(pano_id=first.pano_id, api_key='')
 
         print(meta)  # prints date the streetview was taken and other info
         date = meta.date
@@ -48,7 +48,7 @@ for value1, value2 in zip(first_column, second_column):
         image = get_streetview(  # Gets the actual image
             pano_id=first.pano_id,
             heading=90 * direction,
-            api_key='AIzaSyCXNyCNpX62rVPyVjmHbXkqElpbZxwPNYI',
+            api_key='',
         )
 
 
@@ -85,7 +85,7 @@ for value1, value2 in zip(first_column, second_column):
 
         # This method finds the street_address, city, state, and zip code for the lat and long coordinates
 
-        api_key = 'AIzaSyCXNyCNpX62rVPyVjmHbXkqElpbZxwPNYI'
+        api_key = ''
 
         street_address, city, state, zip_code = get_address_components(value1, value2, api_key)
 
